@@ -1,5 +1,5 @@
 ///
-/// Hyperspace by HTML5 UP
+/// Phantom by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
@@ -8,12 +8,13 @@
 
 	form {
 		margin: 0 0 _size(element-margin) 0;
+		overflow-x: hidden;
 
 		> :last-child {
 			margin-bottom: 0;
 		}
 
-		> .fields {
+		> .fields  {
 			$gutter: (_size(element-margin) * 0.75);
 
 			@include vendor('display', 'flex');
@@ -69,12 +70,10 @@
 	}
 
 	label {
-		color: _palette(fg-bold);
-		font-weight: _font(weight-bold);
-		line-height: 1.5;
-		margin: 0 0 (_size(element-margin) * 0.35) 0;
 		display: block;
-		font-size: 1.1em;
+		font-size: 0.9em;
+		font-weight: _font(weight-bold);
+		margin: 0 0 (_size(element-margin) * 0.5) 0;
 	}
 
 	input[type="text"],
@@ -84,14 +83,14 @@
 	select,
 	textarea {
 		@include vendor('appearance', 'none');
-		background: _palette(border-bg);
-		border-radius: _size(border-radius);
+		background-color: transparent;
 		border: none;
-		border: solid _size(border-width) _palette(border);
+		border-radius: 0;
+		border-bottom: solid _size(border-width) _palette(border);
 		color: inherit;
 		display: block;
 		outline: 0;
-		padding: 0 1em;
+		padding: 0;
 		text-decoration: none;
 		width: 100%;
 
@@ -100,8 +99,8 @@
 		}
 
 		&:focus {
-			border-color: _palette(fg-bold);
-			box-shadow: 0 0 0 _size(border-width) _palette(fg-bold);
+			border-bottom-color: _palette(accent1);
+			box-shadow: inset 0 -1px 0 0 _palette(accent1);
 		}
 	}
 
@@ -138,11 +137,8 @@
 	}
 
 	textarea {
-		padding: 0.75em 1em;
-
-		body.is-ie & {
-			min-height: 10em;
-		}
+		padding: 0;
+		min-height: (_size(element-height) * 1.25);
 	}
 
 	input[type="checkbox"],
@@ -167,7 +163,6 @@
 			position: relative;
 
 			&:before {
-				background: _palette(border-bg);
 				border-radius: _size(border-radius);
 				border: solid _size(border-width) _palette(border);
 				content: '';
@@ -185,17 +180,17 @@
 
 		&:checked + label {
 			&:before {
-				background: _palette(fg-bold);
-				border-color: _palette(fg-bold);
-				color: _palette(accent3);
+				background: _palette(fg);
+				border-color: _palette(fg);
+				color: _palette(bg);
 				content: '\f00c';
 			}
 		}
 
 		&:focus + label {
 			&:before {
-				border-color: _palette(fg-bold);
-				box-shadow: 0 0 0 _size(border-width) _palette(fg-bold);
+				border-color: _palette(accent1);
+				box-shadow: 0 0 0 _size(border-width) _palette(accent1);
 			}
 		}
 	}
@@ -214,24 +209,4 @@
 				border-radius: 100%;
 			}
 		}
-	}
-
-	::-webkit-input-placeholder {
-		color: _palette(fg-light) !important;
-		opacity: 1.0;
-	}
-
-	:-moz-placeholder {
-		color: _palette(fg-light) !important;
-		opacity: 1.0;
-	}
-
-	::-moz-placeholder {
-		color: _palette(fg-light) !important;
-		opacity: 1.0;
-	}
-
-	:-ms-input-placeholder {
-		color: _palette(fg-light) !important;
-		opacity: 1.0;
 	}
