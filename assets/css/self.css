@@ -1,0 +1,152 @@
+.tae-profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.tae-profile-container img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.tae-profile-container h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.tae-profile-container h1:last-of-type {
+  margin-bottom: 30px;
+}
+
+
+.tae-profile-container p {
+  margin-bottom: 15px;
+}
+
+.tae-profile-container ul {
+  margin-bottom: 50px;
+}
+
+.tae-profile-inner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+hr {
+  display:block;
+  border:none;
+  color:white;
+  height:1px;
+  background:gray;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(rgb(170, 170, 170)), to(#fff));
+}
+
+.tae-tech-icons > img {
+  width: 75px;
+  margin: 10px 0;
+}
+
+.tae-tech-icons {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 1em;
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  /* width: 80%;
+  margin: 0 auto; */
+}
+
+.tae-projects > h1 {
+  text-align: center;
+}
+
+.tae-footer .copyright {
+  display: flex;
+  justify-content: center;
+}
+
+.tae-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+#footer {
+  padding: 20px 0;
+}
+
+.tae-footer .icons {
+  margin: 0;
+}
+
+.image {
+  height: 297.97px;
+  /* width: 300px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content > img {
+  width: 100%;
+  height: 100%;
+  height: 280px;
+  margin: 0;
+}
+
+.content {
+  display: none;
+}
+
+.tiles > article:hover .content {
+  display: block;
+}
+
+.tiles > article:hover .image > img {
+  transition: all 0.5s ease-in-out;
+}
+
+.tiles > article:hover .image > img {
+  display: block;
+  position: absolute;
+  top: 0px;
+  z-index: 99;
+  transform: translateY(-60px);
+  width: 200px;
+  height: 60px;
+}
+
+.tiles > article:hover a > h2, .tiles > article:hover a > p {
+  display: none;
+}
+
+.tiles article > a {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.tiles article > a > p { 
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 500px){
+  .tae-tech-icons {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .tae-tech-icons > img {
+    width: 35px;
+    margin: 10px 0;
+  }
+}

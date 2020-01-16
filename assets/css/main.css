@@ -2572,7 +2572,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		position: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
@@ -2592,10 +2592,10 @@ input, select, textarea {
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
 				position: relative;
-				display: block;
+				/* display: block; */
 				width: 100%;
 				border-radius: 4px;
-				overflow: hidden;
+				/* overflow: hidden; */
 			}
 
 				.tiles article > .image img {
@@ -2618,7 +2618,7 @@ input, select, textarea {
 					height: 100%;
 					opacity: 1.0;
 					z-index: 1;
-					opacity: 0.8;
+					opacity: .93;
 				}
 
 				.tiles article > .image:after {
@@ -2668,7 +2668,7 @@ input, select, textarea {
 				left: 0;
 				width: 100%;
 				height: 100%;
-				padding: 1em;
+				/* padding: 1em; */
 				border-radius: 4px;
 				border-bottom: 0;
 				color: #ffffff;
@@ -2737,8 +2737,8 @@ input, select, textarea {
 			}
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
-					background-color: #333333;
-					opacity: 0.35;
+					background-color: #585858;
+					opacity: 1;
 				}
 
 				body:not(.is-touch) .tiles article:hover > .image:after {
