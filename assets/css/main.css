@@ -3273,10 +3273,10 @@ input, select, textarea {
 			}
 
 				#footer > .inner {
-					-moz-flex-direction: column;
+/* 					-moz-flex-direction: column;
 					-webkit-flex-direction: column;
 					-ms-flex-direction: column;
-					flex-direction: column;
+					flex-direction: column; */
 				}
 
 					#footer > .inner section:nth-child(1) {
