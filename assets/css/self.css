@@ -183,6 +183,41 @@ hr {
   font-weight: 500;
 }
 
+.fadeInLeft img {
+  animation: fadeInLeft 0.5s ease-in both;
+}
+
+.fadeInLeft img:nth-child(1) { animation-delay: .3s }
+.fadeInLeft img:nth-child(2) { animation-delay: 0.6s }
+.fadeInLeft img:nth-child(3) { animation-delay: 0.9s }
+.fadeInLeft img:nth-child(4) { animation-delay: 1.2s }
+.fadeInLeft img:nth-child(5) { animation-delay: 1.5s }
+.fadeInLeft img:nth-child(6) { animation-delay: 1.8s }
+.fadeInLeft img:nth-child(7) { animation-delay: 2.1s }
+.fadeInLeft img:nth-child(8) { animation-delay: 2.4s }
+.fadeInLeft img:nth-child(9) { animation-delay: 2.7s }
+.fadeInLeft img:nth-child(10) { animation-delay: 3.0s }
+.fadeInLeft img:nth-child(11) { animation-delay: 3.3s }
+.fadeInLeft img:nth-child(12) { animation-delay: 3.6s }
+.fadeInLeft img:nth-child(13) { animation-delay: 3.9s }
+.fadeInLeft img:nth-child(14) { animation-delay: 4.2s }
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+}
+
+
+
 @media (max-width: 500px){
   .tae-tech-icons {
     grid-template-columns: repeat(7, 1fr);
