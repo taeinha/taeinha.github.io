@@ -185,6 +185,17 @@
 }
 
 
+@media screen and (min-width: 2000px) {
+    #one {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+    .tae-pic {
+        margin-left: 200px;
+    }
+}
+
 @media screen and (max-width: 1280px) {
     #one {
         display: flex;
