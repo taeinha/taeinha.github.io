@@ -1,281 +1,73 @@
-
-#tae-adjust-email {
-  top: 60px;
-  left: -2em;
-  width: 200px;
+#one {
+    display: flex;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    text-align: left;
 }
 
-.fa-envelope .tae-email {
-  width: 0px;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  position: absolute;
-  top: 3px;
-  left: 7px;
-  line-height: 1.3;
-  text-align: center;
-  color: #171717;
-  cursor: default;
-}
-.fa-envelope {
-  display: flex;
-  position: relative;
-  cursor: pointer;
+#one .inner {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    
 }
 
-.fa-envelope .showemail{
-  visibility: visible;
-  width: 170px;
-  display: block;
-  transition: all 1.5s ease;
-  transform: translateX(10%);
+#one {
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+    background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icon {
+    background-color: white;
 }
 
 
-
-.tae-profile-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 40px;
+.icon:hover {
+    color: #ffffff;
 }
 
-.tae-profile-container img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  margin-bottom: 10px;
+.icon:hover {
+    background-color: rgba(190, 190, 190, 0.4);
+    transition: all 0.5s ease-in-out;
 }
 
-.tae-profile-container h1 {
-  text-align: center;
-  margin: 0;
+.tae-pic {
+    border-radius: 50%;
+    width: 25rem;
+    height: 25rem;
 }
 
-.tae-profile-container h1:last-of-type {
-  margin-bottom: 30px;
+@media screen and (max-width: 1280px) {
+    #one {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tae-pic {
+        border-radius: 50%;
+        width: 20rem;
+        height: 20rem;
+        margin-bottom: 3rem;
+    }
+
+    #one .inner {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 40rem;
+    }
 }
 
+@media screen and (max-width: 980px) {
 
-.tae-profile-container p {
-  margin-bottom: 15px;
 }
 
-.tae-profile-container ul {
-  margin-bottom: 50px;
-}
+@media screen and (max-width: 736px) {
 
-.tae-profile-inner {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-hr {
-  display:block;
-  border:none;
-  color:white;
-  height:1px;
-  background:gray;
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(rgb(170, 170, 170)), to(#fff));
-  margin: 75px 0;
-}
-
-.tae-tech-icons > img {
-  width: 75px;
-  margin: 10px 0;
-}
-
-.tae-tech-icons {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 1em;
-  justify-items: center;
-  /* flex-wrap: wrap; */
-  /* width: 80%;
-  margin: 0 auto; */
-}
-
-.tae-projects > h1 {
-  text-align: center;
-}
-
-.tae-footer .copyright {
-  display: flex;
-  justify-content: center;
-}
-
-.tae-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  height: auto;
-}
-
-#footer {
-  padding: 20px 0;
-}
-
-.tae-footer .icons {
-  margin: 0;
-}
-
-.image {
-  height: 297.97px;
-  /* width: 300px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.content > img {
-  width: 100%;
-  height: 100%;
-  max-height: 280px;
-  /* height: 280px; */
-  margin: 0;
-}
-
-.content {
-  display: none;
-}
-
-.tiles > article:hover .content {
-  display: block;
-}
-
-.tiles > article:hover .image > img {
-  display: block;
-  position: absolute;
-  top: 0px;
-  z-index: 99;
-  transform: translateY(-60px);
-  width: 200px;
-  height: 60px;
-  transition: all 0.5s ease-in-out;
-}
-
-.tiles > article:hover a > h2 {
-  display: none;
-}
-
-.tiles > article:hover a > p {
-  position: absolute;
-  color: #171717;
-  transition: all 0.5s ease-in-out;
-  transform: translateY(220px);
-}
-
-.tiles article > a {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.tiles article > a > p { 
-  margin: 0;
-  font-weight: 500;
-}
-
-.fadeInLeft img {
-  animation: fadeInLeft 0.5s ease-in both;
-}
-
-.fadeInLeft img:nth-child(1) { animation-delay: .3s }
-.fadeInLeft img:nth-child(2) { animation-delay: 0.6s }
-.fadeInLeft img:nth-child(3) { animation-delay: 0.9s }
-.fadeInLeft img:nth-child(4) { animation-delay: 1.2s }
-.fadeInLeft img:nth-child(5) { animation-delay: 1.5s }
-.fadeInLeft img:nth-child(6) { animation-delay: 1.8s }
-.fadeInLeft img:nth-child(7) { animation-delay: 2.1s }
-.fadeInLeft img:nth-child(8) { animation-delay: 2.4s }
-.fadeInLeft img:nth-child(9) { animation-delay: 2.7s }
-.fadeInLeft img:nth-child(10) { animation-delay: 3.0s }
-.fadeInLeft img:nth-child(11) { animation-delay: 3.3s }
-.fadeInLeft img:nth-child(12) { animation-delay: 3.6s }
-.fadeInLeft img:nth-child(13) { animation-delay: 3.9s }
-.fadeInLeft img:nth-child(14) { animation-delay: 4.2s }
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-
-.tae-contact-container {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-.tae-contact-container li:first-of-type {
-  text-align: center;
-}
-
-.tae-contact-container h2 {
-  margin-bottom: 20px;
-  margin-top: 2em;
-}
-.icon:before, .fa-angellist:before {
-  width: 20px;
-}
-
-.tae-contact-container li a {
-  display: flex;
-  padding: 0;
-  align-items: center;
-}
-
-.tae-contact-container li .label {
-  display: block;
-  margin-left: 20px;
-}
-
-.spaceOutLeft {
-  -webkit-animation-name: spaceOutLeft;
-  animation-name: spaceOutLeft;
-}
-
-@keyframes spaceOutLeft {
-  0% {
-    opacity: 1;
-    -webkit-transform-origin: 0% 50%;
-    transform-origin: 0% 50%;
-    -webkit-transform: scale(1) translate(0%, 0%);
-    transform: scale(1) translate(0%, 0%);
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform-origin: 0% 50%;
-    transform-origin: 0% 50%;
-    -webkit-transform: scale(0.2) translate(-200%, 0%);
-    transform: scale(0.2) translate(-200%, 0%);
-  }
-}
-
-
-
-@media (max-width: 500px){
-  .tae-tech-icons {
-    grid-template-columns: repeat(7, 1fr);
-  }
-  .tae-tech-icons > img {
-    width: 35px;
-    margin: 10px 0;
-  }
 }
