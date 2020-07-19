@@ -22,6 +22,39 @@
     background-size: cover;
 }
 
+#two {
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/pic01.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/pic01.jpg");
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/pic01.jpg");
+    background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/pic01.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#three {
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/pic02.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/pic02.jpg");
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/pic02.jpg");
+    background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/pic02.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#four {
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/pic03.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/pic03.jpg");
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/pic03.jpg");
+    background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/pic03.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .icon {
     background-color: white;
 }
@@ -75,6 +108,7 @@
     display: block;
     object-fit: cover;
     height: 100%;
+    width: 100%;
 }
 
 .spotlight .image {
@@ -82,7 +116,7 @@
 }
 
 .spotlight {
-    height: 330px;
+    height: 100%;
 }
 
 .features {
@@ -104,8 +138,12 @@
 
 .features .projects-gif img {
     width: 100%;
-    height: 330px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: fill;
+}
+
+.features li {
+    height: 365px;
 }
 
 .project-logos {
@@ -247,8 +285,12 @@
 
     .features .projects-gif img {
         width: 100%;
-        height: 200px;
         object-fit: fill;
+    }
+
+    .features li {
+        height: auto;
+        max-height: 300px;
     }
 
     #three, #four {
