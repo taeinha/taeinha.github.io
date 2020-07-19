@@ -55,7 +55,7 @@
 							<h2>Tae In Ha</h2>
 							<p>Full-stack web developer<br />
 							Ex-data analyst<br />
-							Mochi's friend</p>
+							Mochi's supporter</p>
 							<ul class="actions special">
 								<li><a href="Tae_Ha_Resume.pdf" class="button primary">Resume</a></li>
 							</ul>
@@ -215,6 +215,39 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				const ele = document.getElementById('four');
+				var old_visible = false;
+				
+				const isElementInViewport = el => {
+					const bounding = el.getBoundingClientRect();
+					return (0 < bounding.top && bounding.top < (window.innerHeight || document.documentElement.clientHeight)) ||
+						(0 < bounding.bottom && bounding.bottom < (window.innerHeight || document.documentElement.clientHeight));
+				}
+				
+				const onVisibilityChange = (el, cb) => {
+					return () => {
+						var visible = isElementInViewport(el);
+						if (visible != old_visible) {
+							old_visible = visible;
+							if (typeof cb == 'function') {
+								cb();
+							}
+						}
+					}
+				}
+
+				const handler = onVisibilityChange(ele, () => {
+					if (!old_visible) {
+						ele.classList.remove("fadeInLeft");
+					} else {
+						ele.classList.add("fadeInLeft");
+					}
+				})
+
+				$(window).on('DOMContentLoaded scroll', handler);
+			</script>
 
 	</body>
 </html>
