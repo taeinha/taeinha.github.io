@@ -8,7 +8,7 @@
 #one .inner {
     padding-left: 4rem;
     padding-right: 4rem;
-    
+    max-width: 100%;
 }
 
 #one {
@@ -42,6 +42,76 @@
     height: 25rem;
 }
 
+.company-name {
+    color: #2ddbcd;
+}
+
+.tae-tech-icons {
+  display: grid;
+  grid-template-columns: repeat(7, 9em);
+  grid-gap: 1px;
+  justify-items: center;
+  height: auto;
+}
+
+.small-tech-icons {
+    font-size: 10px;
+}
+
+.small-tech-icons p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.small-tech-icons img {
+    width: 28px;
+    height: 28px;
+}
+
+.image img {
+    display: block;
+    max-width: 774px;
+    max-height: 450px;
+    width: auto;
+    height: auto;
+}
+
+.features {
+    list-style: none;
+}
+
+.features .projects-gif {
+    padding: 0;
+}
+
+.features .projects-description {
+    padding: 40px;
+}
+
+.features .projects-gif img {
+    width: 100%;
+    height: 100%;
+    max-height: 355px;
+}
+
+.project-logos {
+    height: 50px;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.project-links a {
+    width: 40%;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+}
+
 @media screen and (max-width: 1280px) {
     #one {
         display: flex;
@@ -51,7 +121,6 @@
     }
 
     .tae-pic {
-        border-radius: 50%;
         width: 20rem;
         height: 20rem;
         margin-bottom: 3rem;
@@ -69,5 +138,13 @@
 }
 
 @media screen and (max-width: 736px) {
+    #one {
+    padding-left: 5px;
+    padding-right: 5px;
+    }
 
+    .tae-pic {
+        width: 12rem;
+        height: 12rem;
+    }
 }
